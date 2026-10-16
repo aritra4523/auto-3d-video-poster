@@ -1,0 +1,58 @@
+name: Auto 3D Video & 10-Min Series Poster
+on:
+  schedule:
+    - cron: '0 7 * * *'
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Episode Topic'
+        required: true
+        default: 'রামায়ণ মহাকাব্য - পর্ব ১: অযোধ্যায় শ্রীরামের জন্ম ও বিশ্বামিত্রের আশ্রম'
+      part_number:
+        description: 'Part Number'
+        required: true
+        default: '1'
+      duration_minutes:
+        description: 'Duration in Minutes (10, 5, 1)'
+        required: true
+        default: '10'
+      aspect_ratio:
+        description: 'Aspect Ratio (16:9 or 9:16)'
+        required: true
+        default: '16:9'
+      language:
+        description: 'Language (bn, bn-bd, hi, en)'
+        required: true
+        default: 'bn'
+      schedule_time:
+        description: 'Scheduled Publish Time in UTC'
+        required: false
+        default: ''
+permissions:
+  contents: write
+jobs:
+  build-and-post-3d-series:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-extra
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install "moviepy<2.0.0" edge-tts pillow numpy requests google-genai google-api-python-client google-auth-oauthlib
+      - run: python auto_3d_video_poster.py
+        env:
+          TOPIC: ${{ github.event.inputs.topic }}
+          PART_NUMBER: ${{ github.event.inputs.part_number }}
+          DURATION_MINUTES: ${{ github.event.inputs.duration_minutes }}
+          ASPECT_RATIO: ${{ github.event.inputs.aspect_ratio }}
+          LANGUAGE: ${{ github.event.inputs.language }}
+          SCHEDULE_TIME: ${{ github.event.inputs.schedule_time }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}

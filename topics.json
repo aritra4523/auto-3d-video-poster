@@ -1,0 +1,81 @@
+{
+  "queue": [
+    {
+      "id": "q-1",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 1,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ১: অযোধ্যায় শ্রীরামের জন্ম ও বিশ্বামিত্রের আশ্রম (3D Full Episode)",
+      "language": "bn",
+      "schedule_time": "2026-10-16T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-2",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 2,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ২: মিথিলায় সীতা স্বয়ম্বর ও মহাদেবের হরধনু ভঙ্গ (3D Full Episode)",
+      "language": "bn",
+      "schedule_time": "2026-10-17T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-3",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 3,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ৩: কৈকেয়ীর দুই বর এবং শ্রীরামের ১৪ বছরের বনবাস যাত্রা",
+      "language": "bn",
+      "schedule_time": "2026-10-18T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-4",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 4,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ৪: পঞ্চবটী বন, মায়ামৃগ মারীচ এবং রাবণ কর্তৃক সীতা হরণ",
+      "language": "bn",
+      "schedule_time": "2026-10-19T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-5",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 5,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ৫: কিষ্কিন্ধ্যায় মহাবীর হনুমানের সাথে শ্রীরামের মৈত্রী ও লঙ্কা দহন",
+      "language": "bn",
+      "schedule_time": "2026-10-20T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-6",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 6,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ৬: সমুদ্রের ওপর রামসেতু নির্মাণ ও কুম্ভকর্ণ-মেঘনাদ বধ",
+      "language": "bn",
+      "schedule_time": "2026-10-21T14:00:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "q-7",
+      "series_name": "Ramayan 3D Series",
+      "part_number": 7,
+      "duration_minutes": 10,
+      "aspect_ratio": "16:9",
+      "topic": "রামায়ণ মহাকাব্য - পর্ব ৭: শ্রীরাম-রাবণের মহাযুদ্ধ, অযোধ্যায় প্রত্যাবর্তন ও দীপাবলি",
+      "language": "bn",
+      "schedule_time": "2026-10-22T14:00:00Z",
+      "status": "pending"
+    }
+  ]
+}
